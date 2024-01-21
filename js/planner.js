@@ -16,3 +16,14 @@ $(document).ready(function () {
         });
     }
 });
+// Function to save events to local storage
+// Function to load events from local storage
+function loadEvents() {
+    $(".time-block").each(function() {
+      var hour = $(this).attr("data-hour");
+      var event = localStorage.getItem(hour);
+      if (event) {
+        $(this).children(".description").val(event);
+      }
+    });
+  }
