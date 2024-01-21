@@ -16,8 +16,7 @@ $(document).ready(function () {
         });
     }
 });
-// Function to save events to local storage
-// Function to load events from local storage
+// Function to save entries to local storage
 function loadEvents() {
     $(".time-block").each(function() {
       var hour = $(this).attr("data-hour");
@@ -27,3 +26,10 @@ function loadEvents() {
       }
     });
   }
+
+  // Event list for the save button
+   $(".saveBtn").on("click", function() {
+    var hour = $(this).parent().attr("data-hour");
+    var event = $(this).siblings(".description").val();
+    localStorage.setItem(hour, event);
+  });
