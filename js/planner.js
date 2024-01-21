@@ -11,11 +11,14 @@ $(document).ready(function () {
         $(".time-block").each(function () {
             var hour = parseInt($(this).attr("data-hour"));
             if (hour < currentHour) {
-                $(this).addClass("past");
-            } 
-        });
-    }
-});
+              $(this).children(".description").removeClass("present future").addClass("past");
+            } else if (hour === currentHour) {
+              $(this).children(".description").removeClass("past future").addClass("present");
+            } else {
+              $(this).children(".description").removeClass("past present").addClass("future");
+            }
+          });
+        }
 // Function to save entries to local storage
 function loadEvents() {
     $(".time-block").each(function() {
@@ -37,5 +40,6 @@ function loadEvents() {
   // Call functions to initialize the app
   updateColors();
   loadEvents();
+});
 
-
+//solving saving to local directory and timing
