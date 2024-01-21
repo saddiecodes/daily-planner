@@ -5,6 +5,17 @@ $(document).ready(function() {
     // Display the current day at the top of the calendar 
     $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
 
+    // Function to colour-code timeblocks based on past present or future
+    function updateColors() {
+        $(".time-block").each(function() {
+            varhour = parseInt($(this).attr("data-hour"));
+            if (hour <currentHour) {
+                
+            }
+        }
+    }
+
+
 }
   
   
