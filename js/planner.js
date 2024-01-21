@@ -28,8 +28,14 @@ function loadEvents() {
   }
 
   // Event list for the save button
-   $(".saveBtn").on("click", function() {
+  $(".saveBtn").on("click", function() {
     var hour = $(this).parent().attr("data-hour");
     var event = $(this).siblings(".description").val();
     localStorage.setItem(hour, event);
   });
+
+  // Call functions to initialize the app
+  updateColors();
+  loadEvents();
+
+

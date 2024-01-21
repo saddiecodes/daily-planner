@@ -29,6 +29,7 @@ header {
 .time-block {
   text-align: center;
   border-radius: 15px;
+  margin-bottom: 10px; 
 }
 
 .row {
@@ -41,6 +42,7 @@ header {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  line-height: 80px;
 }
 
 .past {
@@ -64,6 +66,7 @@ header {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  line-height: 80px;
 }
 
 .saveBtn i:hover {
