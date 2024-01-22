@@ -12,6 +12,7 @@ $(document).ready(function () {
     function updateColors() {
         $(".time-block").each(function () {
             var hour = parseInt($(this).attr("data-hour"));
+            console.log(hour, currentHour)
             if (hour < currentHour) {
               $(this).children(".description").removeClass("present future").addClass("past");
             } else if (hour === currentHour) {
