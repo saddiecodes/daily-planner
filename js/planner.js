@@ -4,7 +4,9 @@ console.log(currentHour);
 // Wait for the document to be ready before executing any code
 $(document).ready(function () {
     // Display the current day at the top of the calendar
-    $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
+    setInterval(function(){
+      $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY h:mm A"));
+       },1000)
 
     // Function to colour-code timeblocks based on past, present, or future
     function updateColors() {
